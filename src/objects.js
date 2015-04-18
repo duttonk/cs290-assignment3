@@ -9,9 +9,11 @@
 */
 
 function returnObjectLiteral() {
-  //your code here
-  return undefined; //Modify ONLY this line
-  //end your code
+    //your code here
+
+    return {type: 'Goldfish', brand: 'Pepperidge Farm', flavor: 'Cheddar', count: 2000};
+ 
+    //end your code
 }
 
 /**
@@ -38,6 +40,19 @@ function returnObjectLiteral() {
 */
 
 //your code here
+
+
+function MessageLog(user) {
+	this.user = user;
+    this.logMessage = function(messageText, direction) {
+    	  if (direction === 0) {
+    	  	  this.sent = this.sent + 1;
+    	  }
+    	  else if(direction ====1) {
+    	  	  this.received = this.received + 1;
+    	  }
+    }
+}
 
 //end your code
 
