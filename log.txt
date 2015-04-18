@@ -7,5 +7,5 @@ End: Sat, 18 Apr 2015 08:39
 Tasks: Clone assignment repository, push to new repository, try to figure out the date/time stamp received when git log --pretty=format is run, update log and push changes.
 
 Start: Sat, 18 Apr 2015 14:16:50
-End: 
-Tasks: Continue to research git log date issue (no success), work on functions.js and variables.js
+End: Sat, 18 Apr 2015 19:31:52 -0400
+Tasks: Continue to research git log date issue (no success), work on functions.js and variables.js, work on objects.js. (Off and on, researching and working)

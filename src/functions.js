@@ -14,7 +14,7 @@
 
 //your code here
 
-function uselessFunction() {
+function uselessFunction() {    
 	return null;
 }
 
@@ -34,6 +34,10 @@ var barType = typeof bar;
 */
 
 //your code here
+
+bar = function (doubleArray) {
+    
+}
 
 //end your code
 
@@ -70,5 +74,9 @@ function GitLog(hash, date, message) {
 */
 
 //your code here
+
+function parseGit() {
+	
+}
 
 //end your code
