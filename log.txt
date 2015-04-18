@@ -3,4 +3,5 @@ CS290 - Spring 2015
 Assignment 3 Work Log
 
 Start: Sat, 18 Apr 2015 07:23 
-End: Sat, 18 Apr 2015 08:37
+End: Sat, 18 Apr 2015 08:39
+Tasks: Clone assignment repository, push to new repository, try to figure out the date/time stamp received when git log --pretty=format is run
