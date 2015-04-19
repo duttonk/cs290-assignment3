@@ -12,7 +12,7 @@ function returnObjectLiteral() {
     //your code here
 
     return {type: 'Goldfish', brand: 'Pepperidge Farm', flavor: 'Cheddar', count: 2000};
- 
+
     //end your code
 }
 
@@ -47,19 +47,27 @@ function MessageLog(user) {
     var sent = 0, received = 0;
 
     this.logMessage = function (messageText, direction) {
+
         if (direction === 0) {
+            //update sent total
             sent = sent + 1;
+
+            //Add message to beginning of array (stack), keep only 5 at most
             if (msgSent.unshift(messageText) > 5) {
                 msgSent.splice(5, 1);
             }
         }
 
         if (direction === 1) {
+        	//update received total
             received = received + 1;
+
+            //save latest received message
             this.msgReceived = messageText;
         }
     };
 
+    //Most recent message stored at [0] - msgSent behaves as a stack
     this.getSentMessage = function (n) {
         return msgSent[n];
     };
@@ -81,9 +89,11 @@ function MessageLog(user) {
 * received.
 */
 //your code here
+
 MessageLog.prototype.lastReceivedMessage = function () {
     return this.msgReceived;
-}
+};
+
 //end your code
 
 /**

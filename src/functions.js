@@ -14,8 +14,8 @@
 
 //your code here
 
-function uselessFunction() {    
-	return null;
+function uselessFunction() {
+    return null;
 }
 
 //end your code
@@ -94,30 +94,38 @@ function parseGit(logArray) {
     var repl = /\"/gi;
 
     for (i = 0; i < arrLength; i++) {
-        splitStringArr = logArray[i].split(" ");
-
+        splitStringArr = logArray[i].split(" ");   //split array
         splitLength = splitStringArr.length;
 
+        //hash is first element in splitStrArr
         hash = splitStringArr[0];
 
-        for(j = 1; j < 7; j++) {
+        //Add all elements of the date (splitStrArr elements 1 - 6) to dateArr
+        for (j = 1; j < 7; j++) {
             dateArr.push(splitStringArr[j]);
         }
 
+        //concatenate date into a string, then create new date object
         date = dateArr.join(' ');
         dateObj = new Date(date);
 
+        //add all words in the message (splitStrArr elements 7 to end) to msgArr
         for (j = 7; j < splitLength; j++) {
-            msgArr.push(splitStringArr[j])
+            msgArr.push(splitStringArr[j]);
         }
 
+        //concatenate words, delete \" from beginning and end of message
         tmpMsg = msgArr.join(' ');
-        message = tmpMsg.replace(repl,"");
+        message = tmpMsg.replace(repl, "");
 
+        //create new GitLog object and push to gitLogAray
         logObject = new GitLog(hash, dateObj, message);
         gitLogArray.push(logObject);
 
+        //clear arrays for future use
         msgArr = [];
+        date = [];
+        dateArr = [];
     }
     return gitLogArray;
 }
