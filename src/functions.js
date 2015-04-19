@@ -36,7 +36,15 @@ var barType = typeof bar;
 //your code here
 
 bar = function (doubleArray) {
-    
+    var arrLength = doubleArray.length;
+    var i;
+    for (i = 0; i < arrLength; i++) {
+        if (typeof doubleArray[i] !== 'number') {
+            return false;
+        }
+        doubleArray[i] = 2 * doubleArray[i];
+    }
+    return true;
 }
 
 //end your code
@@ -75,8 +83,42 @@ function GitLog(hash, date, message) {
 
 //your code here
 
-function parseGit() {
-	
-}
+function parseGit(logArray) {
+    var arrLength = logArray.length;
+    var gitLogArray = [];
+    var splitStringArr, splitLength, msgArr = [], dateArr = [];
+    var hash, date, dateObj, tmpMsg, message, i, j;
+    var logObject;
 
+    //source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+    var repl = /\"/gi;
+
+    for (i = 0; i < arrLength; i++) {
+        splitStringArr = logArray[i].split(" ");
+
+        splitLength = splitStringArr.length;
+
+        hash = splitStringArr[0];
+
+        for(j = 1; j < 7; j++) {
+            dateArr.push(splitStringArr[j]);
+        }
+
+        date = dateArr.join(' ');
+        dateObj = new Date(date);
+
+        for (j = 7; j < splitLength; j++) {
+            msgArr.push(splitStringArr[j])
+        }
+
+        tmpMsg = msgArr.join(' ');
+        message = tmpMsg.replace(repl,"");
+
+        logObject = new GitLog(hash, dateObj, message);
+        gitLogArray.push(logObject);
+
+        msgArr = [];
+    }
+    return gitLogArray;
+}
 //end your code
