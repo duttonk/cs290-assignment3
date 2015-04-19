@@ -15,5 +15,5 @@ End: Sun, 19 Apr 2015 13:19:16 -0400
 Tasks: Work on parseGit() function - working for all but date1, researched code for MessageLog object, completed objects.js. Asked about the date parsing test on Piazza.
 
 Start: Sun, 19 Apr 2015 14:01:05 -0400
-End: Sun, 19 Apr 2015 14:30:00 -0400
-Tasks: Step through parseGit() function to find error - not clearing all arrays (forgot one). Check all code again using JSLint and finalize comments.
+End: Sun, 19 Apr 2015 14:41:32 -0400
+Tasks: Step through parseGit() function to find error - not clearing all arrays (forgot one). Check all code again using JSLint and finalize comments. Update MessageLog object so all variables are member variables using "this".

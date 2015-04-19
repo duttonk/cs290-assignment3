@@ -43,24 +43,25 @@ function returnObjectLiteral() {
 
 function MessageLog(user) {
     this.user = user;
-    var msgSent = [];
-    var sent = 0, received = 0;
+    this.sent = 0;
+    this.received = 0;
+    this.msgSent = [];
 
     this.logMessage = function (messageText, direction) {
 
         if (direction === 0) {
             //update sent total
-            sent = sent + 1;
+            this.sent = this.sent + 1;
 
             //Add message to beginning of array (stack), keep only 5 at most
-            if (msgSent.unshift(messageText) > 5) {
-                msgSent.splice(5, 1);
+            if (this.msgSent.unshift(messageText) > 5) {
+                this.msgSent.splice(5, 1);
             }
         }
 
         if (direction === 1) {
             //update received total
-            received = received + 1;
+            this.received = this.received + 1;
 
             //save latest received message
             this.msgReceived = messageText;
@@ -69,15 +70,15 @@ function MessageLog(user) {
 
     //Most recent message stored at [0] - msgSent behaves as a stack
     this.getSentMessage = function (n) {
-        return msgSent[n];
+        return this.msgSent[n];
     };
 
     this.totalSent = function () {
-        return sent;
+        return this.sent;
     };
 
     this.totalReceived = function () {
-        return received;
+        return this.received;
     };
 }
 
