@@ -8,4 +8,6 @@ Tasks: Clone assignment repository, push to new repository, try to figure out th
 
 Start: Sat, 18 Apr 2015 14:16:50
 End: Sat, 18 Apr 2015 19:31:52 -0400
-Tasks: Continue to research git log date issue (no success), work on functions.js and variables.js, work on objects.js. (Off and on, researching and working)
+Tasks: Continue to research git log date issue (no success - later resolved via Piazza), work on functions.js and variables.js, work on objects.js. (Off and on, researching and working).
+
+Start: Sun, 19 Apr 2015
