@@ -43,14 +43,16 @@ function returnObjectLiteral() {
 
 
 function MessageLog(user) {
-	this.user = user;
-    this.logMessage = function(messageText, direction) {
-    	  if (direction === 0) {
-    	  	  this.sent = this.sent + 1;
-    	  }
-    	  else if(direction ====1) {
-    	  	  this.received = this.received + 1;
-    	  }
+    this.user = user;
+    
+    this.logMessage = function (messageText, direction) {
+        if (direction === 0) {
+            this.sent = this.sent + 1;
+        }
+
+        else if (direction === 1) {
+            this.received = this.received + 1;
+        }
     }
 }
 
