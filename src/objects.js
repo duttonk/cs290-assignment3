@@ -59,7 +59,7 @@ function MessageLog(user) {
         }
 
         if (direction === 1) {
-        	//update received total
+            //update received total
             received = received + 1;
 
             //save latest received message
